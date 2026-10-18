@@ -1,0 +1,27 @@
+[project]
+name = "omniconvert"
+version = "0.1.0"
+description = "Convert (almost) any file format to any other: documents, spreadsheets, slides, PDFs, images, audio and video."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "odfpy>=1.4",
+    "pillow>=11.0",
+    "pymupdf>=1.24",
+    "pdf2docx>=0.5.8",
+    "pypandoc-binary>=1.13",
+]
+
+[project.scripts]
+omniconvert = "omniconvert.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
